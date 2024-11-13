@@ -1,0 +1,5 @@
+# .gitignore na raiz do projeto
+.env
+.idea
+.vscode
+*.log

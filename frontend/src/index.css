@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  color: white;
+  opacity: 1;
+}
+
+:where(.css-dev-only-do-not-override-10iysuc).ant-menu-dark.ant-menu-inline
+  .ant-menu-sub.ant-menu-inline,
+:where(.css-dev-only-do-not-override-10iysuc).ant-menu-dark
+  > .ant-menu.ant-menu-inline
+  .ant-menu-sub.ant-menu-inline {
+  background: none;
+}
+
+.ant-layout .ant-layout-sider-trigger {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  height: 48px;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  background: none !important;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ant-menu-submenu-placement-rightTop .ant-menu {
+  background-color: black !important;
+}
+
+.ant-layout .ant-layout-sider-trigger {
+  position: relative;
+  bottom: 3 !important;
+}
+
+.ant-pagination-item-link {
+  color: white !important;
+}
+
+.ant-input-affix-wrapper .anticon.ant-input-password-icon {
+  color: #37996b;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ant-input-affix-wrapper:hover .anticon.ant-input-password-icon:hover {
+  color: #37996b;
+}
+
+.ant-input-outlined {
+  color: black !important;
+  background-color: #dddcdc !important;
+  border: none !important;
+}
+
+.ant-select-selector {
+  color: black !important;
+  background-color: #dddcdc !important;
+  border: none !important;
+}
+
+.ant-input-number-outlined {
+  color: black !important;
+  background-color: #dddcdc !important;
+  border: none !important;
+}
+
+.ant-empty-normal .ant-empty-description {
+  color: white !important;
+  stroke: white !important;
+}
+
+.ant-empty .ant-empty-image path {
+  color: white !important;
+  stroke: white !important;
+}
+
+.ant-popover-inner {
+  background-color: black !important;
+  color: white !important;
+}
+
+.ant-popover-arrow {
+  color: black !important;
+  fill: black;
+}
+
+.ant-btn {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-notification-notice-message {
+  color: black !important;
+}
+
+.ant-notification-notice-description {
+  color: white !important;
+}
+
+.ant-modal-content {
+  background-color: #1c1c1c !important;
+}
+
+.ant-modal-header {
+  background: none !important;
+}
+
+.ant-modal-title {
+  color: white !important;
+}
+
+.ant-input-outlined {
+  color: black !important;
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.uploaded-image {
+  width: fit-content;
+  height: auto;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.ant-select-dropdown {
+  background-color: #1c1c1c !important;
+  color: white !important;
+}
+
+.ant-select-item-option-active {
+  background-color: #37996b !important;
+}
+
+.ant-table-filter-trigger{
+  color: white !important;
+}
+
+.ant-btn-link:disabled {
+  color: white !important;
+}
+
+.badge {
+  position: absolute;
+  bottom: 0;
+  right: -5px; /* Ajuste conforme necessário para posicionar o badge corretamente */
+  width: 8px;
+  height: 8px;
+  background-color: #37996b;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate; /* Animação de pulso */
+}
+
+.ant-menu-sub.ant-menu-inline{
+  background-color: #232323 !important;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}

@@ -1,0 +1,5 @@
+export { default as CustomHeader } from "./custom-header"
+export { default as TableInstalledComputer } from "./computadores/instalacao/table-installed-computer"
+export { default as TableRemovedComputer } from "./computadores/remocao/table-removed-computer"
+export { default as TableHistoricComputer } from "./computadores/historico/table-historic-computer"
+export { default as TableDepositComputer } from "./Deposito/table-deposit-computer"

@@ -1,0 +1,26 @@
+Desktop
+Optiplex 3010
+Optiplex 9010
+Optiplex 7010
+Optiplex 3020
+Optiplex 3040
+Optiplex 3040 Micro
+Optiplex 3050
+Optiplex 3050 Micro
+Optiplex 3060
+Optiplex 3060 Micro
+Optiplex 3070
+Optiplex 3080
+Optiplex 3080 Micro
+Optiplex 3090
+Optiplex 3000
+Notebook
+Inspiron 14
+Inspiron 15
+Latitude 3400
+Latitude 3410
+Latitude 3420
+Latitude 3480
+Latitude 5480
+Latitude 5490
+Latitude 5520
