@@ -8,7 +8,7 @@ export class CronService {
     private readonly findComputerToNotifyUseCase: FindComputerToNotifyUseCase,
   ) {}
 
-  @Cron('0 9,14 * * 1-5')
+  @Cron('0 12,17 * * 1-5')
   async handleNotifyInstalacao() {
     try {
       const computers = await this.findComputerToNotifyUseCase.execute();
@@ -16,10 +16,16 @@ export class CronService {
       for (const computer of computers) {
         const { computerName, responsible } = computer;
 
+        const htmlBody = `
+          <p>Caso o computador <strong>${computerName}</strong> esteja concluído, 
+          atualize o status do mesmo no 
+          <a href="http://192.168.0.22/computers-installation">TaskFlow</a></p>
+        `.trim();
+
         const data = {
           title: 'Verificar registro de instalação',
           computerName: computerName,
-          body: `Caso o computador <b>${computerName}</b> esteja concluído, atualize o status do mesmo no <a href='http://192.168.0.22/installed-computers'>TaskFlow</a>`,
+          body: htmlBody,
           to: responsible,
           token: 'elTLSIvorZSfju3pAvHssH0Yq2eEeQDTo3kKO5t6gKalLk705S',
         };
@@ -30,14 +36,15 @@ export class CronService {
 
         const response = await fetch(emailUrl, {
           method: 'POST',
-          body: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json',
           },
+          body: JSON.stringify(data),
         });
 
-        if (!response.ok) {
-          throw new Error(`Erro ao enviar email: ${response.statusText}`);
+        if (response.status !== 200) {
+          const errorText = await response.text();
+          throw new Error(`Erro ao enviar email: ${response.statusText} - ${errorText}`);
         }
       }
     } catch (error) {

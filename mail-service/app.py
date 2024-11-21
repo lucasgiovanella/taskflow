@@ -27,7 +27,7 @@ def send_mail():
         # Escapar o corpo do email com shlex.quote e adicionar aspas duplas para proteger caracteres especiais
         escaped_body = f'"{shlex.quote(body)}"'
 
-        command = f'sendEmail -f taskflow@univates.br -t {to_email} -u "{title} - {computer_name}" -m {escaped_body}'
+        command = f'sendEmail -f taskflow@univates.br -t {to_email} -u "{title} - {computer_name}" -m {escaped_body} -o message-content-type=html'
 
         print(f"Executando comando: {command}")
 
